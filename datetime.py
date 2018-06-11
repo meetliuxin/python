@@ -51,5 +51,12 @@ print(utc_dt)
 bj_dt=utc_dt.astimezone(timezone(timedelta(hours=8)))
 
 
+#网络获得的时间经常是字符串，网络获得的时间转换
+import datetime
+str='2018-6-6T13:23:20+0800'
+dt=datetime.datetime.strptime(str,'%Y-%m-%dT%H:%M:%S%z')
+print(dt)　　#2018-06-06 13:23:20+08:00
+
+
 
 
