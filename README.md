@@ -1,3 +1,3 @@
 #python知识总结
 
-#python练习
+#python基础练习
