@@ -1,10 +1,6 @@
 import re
 
 
-print(result.span())
-
-
-
 #贪婪非贪婪
 content = 'Hello 1234567 World_This is a Regex Demo'
 result = re.match('^He.*(\d+).*Demo$', content)
