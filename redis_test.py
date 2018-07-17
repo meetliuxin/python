@@ -23,7 +23,8 @@ print(redis.get('name'))
 
 
 基本操作:
-打开服务端redis-server再开一个窗口打开客户端redis-cli
+打开服务端redis-server再开一个窗口打开客户端redis-cli 输入ping 返回pong则表示连接成功；
+远程连接：redis-cli -h host -p port -a password
 切换到db2数据库：select 2
 清除当前数据库数据：flushdb
 
@@ -56,6 +57,14 @@ zset的成员是唯一的,但分数(score)却可以重复:
 	zadd myzset 2 v2
 	zadd myzset 3 v3
 	zrangebyscore 0 3
+五种数据结构更多操作参考　http://www.runoob.com/redis/redis-tutorial.html
+
+Redis 键(key)   Redis 键命令用于管理 redis 的键:
+	语法：COMMAND KEY_NAME
+	set mykey liuxin
+	get mykey
+	更多命令参考　http://www.runoob.com/redis/redis-keys.html
+	
 
 
 	
@@ -93,7 +102,7 @@ zset的成员是唯一的,但分数(score)却可以重复:
 # Set: 集合
 # Sorted Set: 有序集合
 
-Redis配置文件中下面的参数来控制数据库总数：/etc/redis/redis.conf 文件中，有个配置项 databases = 16 //默认有16个数据库
+# Redis配置文件中下面的参数来控制数据库总数：/etc/redis/redis.conf 文件中，有个配置项 databases = 16 //默认有16个数据库
 
 
 
